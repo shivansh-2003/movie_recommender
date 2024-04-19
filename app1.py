@@ -16,12 +16,12 @@ def recommend(movie):
     return recommended_movie_names
 
 # Load the movie_list.pkl file
-movie_list_path = '/Users/shivanshmahajan/Desktop/DataScinece/Machine Learning/Projects/movie_recommender/movie_list.pkl'
+movie_list_path = 'movie_list.pkl'
 movie_list = pickle.load(open(movie_list_path, 'rb'))
 movies = pd.DataFrame(movie_list)
 
 # Load the similarity.pkl file
-similarity_path = '/Users/shivanshmahajan/Desktop/DataScinece/Machine Learning/Projects/movie_recommender/similarity.pkl'
+similarity_path = 'similarity.pkl'
 similarity = pickle.load(open(similarity_path, 'rb'))
 
 st.title("Movie Recommender System")
