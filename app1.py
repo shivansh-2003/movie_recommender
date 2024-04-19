@@ -38,9 +38,7 @@ st.title("Movie Recommender System")
 option = st.selectbox("What movie do you like?", movies['title'].values)
 
 if st.button('Show Recommendation'):
-    recommended_movie_names,recommended_movie_posters = recommend(option)
-    cols = st.columns(5)
-    for i in range(5):
-        with cols[i]:
-            st.text(recommended_movie_names[i])
-            st.image(recommended_movie_posters[i])
+    recommended_movie_names = recommend(option)
+    for movie_name in recommended_movie_names:
+        st.write(movie_name)
+
